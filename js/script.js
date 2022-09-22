@@ -1,8 +1,7 @@
 /* API / MAP */
 
 var map = L.map('map').setView([0, 0], 3);
-var marker = L.circle([0, 0], {
-  radius: 20,
+var marker = L.circle([0, 0], 150000, {
   color: 'white',
 }).addTo(map);
 
