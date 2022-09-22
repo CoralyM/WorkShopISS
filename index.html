@@ -17,13 +17,13 @@
             <nav id="menu_nav">
                 <ul>
                     <li>
-                        <a href=''>Specifications</a>
+                        <a href='#specifications'>Specifications</a>
                     </li>
                     <li>
-                        <a href=''>Next missions</a>
+                        <a href='#next_missions'>Next missions</a>
                     </li>
                     <li>
-                        <a href=''>Location</a>
+                        <a href='#map'>Location</a>
                     </li>
                 </ul>
             </nav>
@@ -41,12 +41,11 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide"></div>
               <div class="swiper-slide"></div>
-              <div class="swiper-slide"></div>
             </div>
           </div>
     </section>
 
-    <section class="specifications container">
+    <section class="specifications container" id="specifications">
         <div class="specifications_text">
             <h2>Specifications</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -55,16 +54,16 @@
                 ullamco laboris nisi ut aliquip ex ea.</p>
             <div class="specifications_figures">
                 <div>
-                    <span>110m</span>
-                    <span>Longueur</span>
+                    <span class="counter" data-target="109">0</span>
+                    <span>Width (in meters)</span>
                 </div>
                 <div>
-                    <span>110m</span>
-                    <span>Longueur</span>
+                    <span class="counter" data-target="73">0</span>
+                    <span>Length (in meters)</span>
                 </div>
                 <div>
-                    <span>110m</span>
-                    <span>Longueur</span>
+                    <span class="counter" data-target="444">0</span>
+                    <span>Mass (in tons)</span>
                 </div>
             </div>
         </div>
@@ -77,7 +76,22 @@
         <div id="map"></div>
     </section>
 
-    <section class="next_missions container">
+    <section class="map_infos container">
+        <div>
+            <span>Longitude :</span>
+            <span id="longitude"></span>
+        </div>
+        <div>
+            <span>Latitude :</span>
+            <span id="latitude"></span>
+        </div>
+        <div>
+            <span>Velocity :</span>
+            <span id="velocity"></span>
+        </div>
+    </section>
+
+    <section class="next_missions container" id="next_missions">
         <div class="next_missions_text">
             <h2>Next missions</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -104,6 +118,10 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <span>ISS</span>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>

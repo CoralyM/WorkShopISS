@@ -19,6 +19,10 @@ setInterval(function () {
     marker.setLatLng(newLatLng);
     map.setView(newLatLng);
 
+    document.getElementById('latitude').innerHTML = data.latitude;
+    document.getElementById('longitude').innerHTML = data.longitude;
+    document.getElementById('velocity').innerHTML = data.velocity;
+
   });
 
 }, 2000);
@@ -35,11 +39,17 @@ var swiper = new Swiper(".swiper_banner", {
 /* SLIDER NEXT MISSIONS */
 
 var swiper_missions = new Swiper(".swiper_missions", {
-  slidesPerView: 2.2,
+  slidesPerView: 1.5,
   spaceBetween: 15,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 2.2,
+      spaceBetween: 15,
+    },
   },
 });
 
@@ -59,3 +69,31 @@ function menu() {
     btn.classList.add('menu_close');
   }
 }
+
+/* NUMBER INCREMENT */
+
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('.specifications_figures');
+	var position = element.getBoundingClientRect();
+
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+
+    const counters = document.querySelectorAll('.counter');
+
+    for(let n of counters) {
+      const updateCount = () => {
+        const target = + n.getAttribute('data-target');
+        const count = + n.innerText;
+        const speed = 5000;
+        const inc = target / speed; 
+        if(count < target) {
+          n.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 200);
+        } else {
+          n.innerText = target;
+        }
+      }
+      updateCount();
+    }
+	}
+});

@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -58,11 +59,26 @@ header div nav ul li a {
     color: black;
     font-weight: bold;
     font-family: 'Raleway';
+    box-shadow: inset 0 0 0 0 #303234;
+    padding: 11px 15px;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+header div nav ul li:not(:last-child) a:hover {
+    box-shadow: inset 200px 0 0 0 #303234;
+    color: white;
 }
 
 header div nav ul li:last-child a {
     color: white;
     background-color: #303234;
+    border: 2px solid #303234;
+    padding: 10px 20px;
+}
+
+header div nav ul li:last-child a:hover {
+    color: #303234;
+    background-color: white;
     padding: 10px 20px;
 }
 
@@ -190,7 +206,7 @@ header div nav ul li:last-child a {
     align-items: center;
     justify-content: center;
     background-color: #303234;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     margin-top: 200px;
 }
 
@@ -205,6 +221,15 @@ header div nav ul li:last-child a {
 
 .map .leaflet-marker-pane img{
     display: none;
+}
+
+.map_infos {
+    padding-bottom: 150px;
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    font-weight: 700;
 }
 
 /* Next missions */
@@ -272,6 +297,17 @@ header div nav ul li:last-child a {
 
 .swiper-button-prev img {
     transform: rotate(180deg);
+}
+
+/* Footer */
+
+footer {
+    background-color: #303234;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* RESPONSIVE */
@@ -423,6 +459,18 @@ header div nav ul li:last-child a {
     #map {
         width: 100%;
     }
+
+    .map_infos {
+        padding-bottom: 50px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        font-weight: 700;
+    }
+    
 
     /* NEXT MISSIONS */
 
