@@ -1,0 +1,446 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+}
+
+header .menu_btn {
+    display: none;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header div nav ul li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+header div nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+
+header div nav ul li:last-child a {
+    color: white;
+    background-color: #303234;
+    padding: 10px 20px;
+}
+
+/* BANNER */
+
+.banner {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.banner h2 {
+    mix-blend-mode: plus-lighter;
+    font-family: 'Raleway';
+    -webkit-text-stroke: 1px #303234;
+    color: transparent;
+    position: absolute;
+    margin: 0;
+    z-index: 10;
+}
+
+.banner h2:nth-child(1) {
+    font-size: 10rem;
+    left: -100px;
+    top: -10px;
+}
+
+.banner h2:nth-child(2) {
+    font-size: 15rem;
+    right: -105px;
+    top: 145px;
+}
+
+.banner h2:nth-child(3) {
+    font-size: 15rem;
+    left: -100px;
+    bottom: -20px;
+}
+
+.swiper_banner {
+    width: 70%;
+    height: 80%;
+}
+
+.swiper_banner .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    height: 400px;
+}
+
+.swiper_banner .swiper-slide:nth-child(1) {
+    background-image: url(../images/banner.jpg);
+}
+
+.swiper_banner .swiper-slide:nth-child(2) {
+    background-image: url(../images/banner2.png);
+}
+
+.swiper_banner .swiper-slide:nth-child(3) {
+    background-image: url(../images/banner2.png);
+}
+
+/* SPECIFICATIONS */
+
+.specifications {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.specifications .specifications_text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.specifications h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #303234;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.specifications_img {
+    text-align: right;
+    width: 50%;
+}
+
+.specifications_img img {
+    width: 400px;
+    height: auto;
+}
+
+.specifications_figures {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.specifications_figures div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.specifications_figures div span:nth-child(1){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* MAP */
+
+.map {
+    height: 100px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #303234;
+    margin-bottom: 300px;
+    margin-top: 200px;
+}
+
+#map {
+    height: 360px;
+    width: 70%;
+}
+
+.map .leaflet-control-attribution {
+    display: none;
+}
+
+.map .leaflet-marker-pane img{
+    display: none;
+}
+
+/* Next missions */
+
+.next_missions {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.next_missions_text {
+    width: 45%;
+    padding-bottom: 20px;
+}
+
+.next_missions_text h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #303234;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.next_missions .swiper_missions {
+    width: 100%;
+    height: 100%;
+}
+
+.next_missions .swiper_missions .swiper-slide {
+    background-image: url(../images/crew-dragon.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    filter: grayscale();
+}
+
+.swiper_missions_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.next_missions_pagination {
+    width: 17%;
+    position: relative;
+}
+
+.next_missions_pagination button {
+    background-color: transparent;
+    border: none;
+}
+
+.next_missions_pagination button img {
+    width: 30px;
+    height: auto;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: '';
+}
+
+.swiper-button-prev img {
+    transform: rotate(180deg);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1080px) {
+    .container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* HEADER */
+
+    header {
+        box-shadow: none;
+        height: 20px;
+    }
+
+    header div {
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        background-color: white;    
+        display: none;
+    }
+    header div nav ul {
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    header .menu_btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    header .menu_btn.menu_close {
+        background-image: url(../images/menu_open.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .25s ease-in-out;
+    }
+
+    header .menu_btn.menu_open {
+        background-image: url(../images/menu_close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .25s ease-in-out;
+    }
+
+    /* BANNER */
+
+    .banner {
+        height: 550px;
+    }
+
+    .swiper_banner {
+        width: 80%;
+        height: 95%;
+    }
+    
+    .banner h2:nth-child(1) {
+        font-size: 2.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 200px;
+    }
+    
+    .banner h2:nth-child(2) {
+        font-size: 5.5rem;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        top: 230px;
+    }
+    
+    .banner h2:nth-child(3) {
+        font-size: 4.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 150px;
+    }
+
+    /* SPECIFICATIONS */
+
+    .specifications {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .specifications .specifications_text {
+        width: 100%;
+    }
+    
+    .specifications_img {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .specifications_img img {
+        width: 80%;
+        height: auto;
+    }
+    
+    .specifications_figures {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .specifications_figures div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .specifications_figures div span:nth-child(1){
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* MAP */
+
+    .map {
+        height: auto;
+        overflow: hidden;
+        background-color: none;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    #map {
+        width: 100%;
+    }
+
+    /* NEXT MISSIONS */
+
+    .next_missions {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    
+    .next_missions_text {
+        width: 100%;
+    }
+    
+    .swiper_missions_container {
+        width: 100%;
+    }
+    
+    .next_missions_pagination {
+        width: 30%;
+        height: 20px;
+    }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>ISS Location</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>logo</div>
+            <nav id="menu_nav">
+                <ul>
+                    <li>
+                        <a href=''>Specifications</a>
+                    </li>
+                    <li>
+                        <a href=''>Next missions</a>
+                    </li>
+                    <li>
+                        <a href=''>Location</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu_btn menu_close" id="menu_btn" onclick="menu()"></div>
+        </div>
+    </header>
+
+    <section class="banner container">
+        <div class="banner_text">
+            <h2>International</h2>
+            <h2>Space</h2>
+            <h2>Station</h2>
+        </div>
+        <div class="swiper swiper_banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+          </div>
+    </section>
+
+    <section class="specifications container">
+        <div class="specifications_text">
+            <h2>Specifications</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea.</p>
+            <div class="specifications_figures">
+                <div>
+                    <span>110m</span>
+                    <span>Longueur</span>
+                </div>
+                <div>
+                    <span>110m</span>
+                    <span>Longueur</span>
+                </div>
+                <div>
+                    <span>110m</span>
+                    <span>Longueur</span>
+                </div>
+            </div>
+        </div>
+        <div class="specifications_img">
+            <img src="images/iss.png" loading="lazy">
+        </div>
+    </section>
+
+    <section class="map container">
+        <div id="map"></div>
+    </section>
+
+    <section class="next_missions container">
+        <div class="next_missions_text">
+            <h2>Next missions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea.</p>
+        </div>
+        <div class="swiper_missions_container">
+            <div class="swiper swiper_missions">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="next_missions_pagination">
+                <button class="swiper-button-prev">
+                    <img src="images/arrow.png">
+                </button>
+                <button class="swiper-button-next">
+                    <img src="images/arrow.png">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

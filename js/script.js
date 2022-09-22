@@ -1,0 +1,61 @@
+/* API / MAP */
+
+var map = L.map('map').setView([0, 0], 3);
+var marker = L.circle([0, 0], {
+  radius: 20,
+  color: 'white',
+}).addTo(map);
+
+L.tileLayer('http://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+}).addTo(map);
+
+setInterval(function () {
+  
+  fetch('https://api.wheretheiss.at/v1/satellites/25544').then(response => {
+    return response.json();
+  }).then(data => {
+
+    var newLatLng = new L.LatLng(data.latitude, data.longitude);
+    marker.setLatLng(newLatLng);
+    map.setView(newLatLng);
+
+  });
+
+}, 2000);
+
+/* SLIDER BANNER */
+
+var swiper = new Swiper(".swiper_banner", {
+  direction: "vertical",
+  autoplay: {
+    delay: 5000,
+  }
+});
+
+/* SLIDER NEXT MISSIONS */
+
+var swiper_missions = new Swiper(".swiper_missions", {
+  slidesPerView: 2.2,
+  spaceBetween: 15,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+/* MENU */
+
+function menu() {
+  let menu = document.getElementById('menu_nav');
+  let btn = document.getElementById('menu_btn');
+
+  if(btn.classList.contains('menu_close')) {
+    menu.style.display = 'block';
+    btn.classList.remove('menu_close');
+    btn.classList.add('menu_open');
+  } else {
+    menu.style.display = 'none';
+    btn.classList.remove('menu_open');
+    btn.classList.add('menu_close');
+  }
+}

@@ -1,0 +1,6 @@
+- Header (Informations, Position, Calendrier)
+- Bannière
+
+- Informations (taille/mesures, personnes à bord) 110m longueur, 74m largeur, 30m hauteur, 420 tonnes
+- Position en direct
+- Calendrier futures missions
