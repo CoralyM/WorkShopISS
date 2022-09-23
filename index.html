@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>ISS Location</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -54,10 +55,13 @@
     <section class="specifications container" id="specifications">
         <div class="specifications_text">
             <h2>Specifications</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea.</p>
+            <p>
+                The International Space Station (ISS) is a permanently crewed on-orbit laboratory that enables
+                scientific research supporting innovation on Earth and future deep space exploration. From design
+                to launch, 15 countries collaborated to assemble the world's only permanently crewed orbital
+                facility, which can support up to seven astronauts and 300 to 400 experiments per crew increment,
+                across an array of disciplines.
+            </p>
             <div class="specifications_figures">
                 <div>
                     <span class="counter" data-target="109">0</span>
@@ -94,24 +98,53 @@
         <div>
             <span>Velocity :</span>
             <span id="velocity"></span>
+            <span>km/h</span>
         </div>
     </section>
 
     <section class="next_missions container" id="next_missions">
         <div class="next_missions_text">
             <h2>Next missions</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea.</p>
+            <p>
+                SpaceX has been delivering cargo to and from the International Space Station since 2012,
+                and in 2020 SpaceX began transporting people to the orbiting laboratory under NASA’s Commercial
+                Crew Program.
+            </p>
+            <div class="countdown">
+                <p>Next mission in:</p>
+                <div id="countdown"></div>
+            </div>
         </div>
         <div class="swiper_missions_container">
             <div class="swiper swiper_missions">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
+                  <div class="swiper-slide">
+                    <h2>Crew-5 - October 2022</h2>
+                    <p>
+                        SpaceX's next manned mission to the International Space Station is scheduled for October 2022.
+                        The entire crew is known: there are two Americans (Nicole Mann and Josh Cassada), one Japanese
+                        (Kōichi Wakata) and, for the fourth seat, one evokes a great first: the presence of a Russian,
+                        namely Anna Kikina.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <h2>Crew 6 - April 2023</h2>
+                    <p>
+                        SpaceX will proceed in April 2023 to a new takeoff in the direction of the ISS. Mission name:
+                        Crew-6. For the moment, two of the four members are known: the Americans Stephen Bowen and
+                        Warren Hoburg. The third seat should be reserved for an Emirati astronaut. It would not be a
+                        first: in 2019, Hazza Al Mansouri was the first to go into space.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <h2>Crew 7 - September 2023</h2>
+                    <p>
+                        The Crew-7 mission is a mission in more than a year, in September 2023. As of the Crew Dragon
+                        capsule, we already know two of the four passengers: the American Jasmin Moghbeli and the
+                        Dane Andreas Mogensen. This will be a first for Jasmin, who will serve as captain.
+                        Andreas has already stayed on the ISS. He will be the pilot.
+                    </p>
+                  </div>
                 </div>
             </div>
             <div class="next_missions_pagination">
@@ -130,10 +163,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href=''>Legal Notice</a>
+                    <a href='#specifications'>Specifications</a>
                 </li>
                 <li>
-                    <a href=''>Privacy Policy</a>
+                    <a href='#next_missions'>Next missions</a>
+                </li>
+                <li>
+                    <a href='#map'>Position</a>
                 </li>
             </ul>
         </nav>
@@ -141,6 +177,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

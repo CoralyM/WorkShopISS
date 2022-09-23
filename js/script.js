@@ -18,9 +18,11 @@ setInterval(function () {
     marker.setLatLng(newLatLng);
     map.setView(newLatLng);
 
+    let velocity = Math.round(data.velocity * 100) / 100;
+
     document.getElementById('latitude').innerHTML = data.latitude;
     document.getElementById('longitude').innerHTML = data.longitude;
-    document.getElementById('velocity').innerHTML = data.velocity;
+    document.getElementById('velocity').innerHTML = velocity;
 
   });
 
@@ -38,7 +40,7 @@ var swiper = new Swiper(".swiper_banner", {
 /* SLIDER NEXT MISSIONS */
 
 var swiper_missions = new Swiper(".swiper_missions", {
-  slidesPerView: 1.5,
+  slidesPerView: 1.2,
   spaceBetween: 15,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -95,4 +97,65 @@ window.addEventListener('scroll', function() {
       updateCount();
     }
 	}
+});
+
+/* COUNTDOWN NEXT MISSION */
+
+var countDownDate = new Date("Oct 3, 2022").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+/* APPARITION ANIMATION */
+
+gsap.from(".specifications_text", {
+  scrollTrigger: ".specifications_text",
+  x: -200,
+  duration: 1,
+});
+
+gsap.from(".specifications_img", {
+  scrollTrigger: ".specifications_text",
+  y: 200,
+  duration: 1,
+});
+
+gsap.from("#map", {
+  scrollTrigger: ".map",
+  y: 200,
+  duration: 1,
+});
+
+gsap.from(".map_infos", {
+  scrollTrigger: ".map_infos",
+  x: -200,
+  duration: 1,
+});
+
+gsap.from(".next_missions_text", {
+  scrollTrigger: ".next_missions_text",
+  x: -200,
+  duration: 1,
+});
+
+gsap.from(".swiper_missions_container", {
+  scrollTrigger: ".swiper_missions_container",
+  y: 200,
+  duration: 1,
 });

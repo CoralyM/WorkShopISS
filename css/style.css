@@ -286,11 +286,52 @@ header div nav ul li:last-child a:hover {
 }
 
 .next_missions .swiper_missions .swiper-slide {
-    background-image: url(../images/crew-dragon.jpg);
     background-size: cover;
     background-position: center;
     height: 400px;
     filter: grayscale();
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.next_missions .swiper_missions .swiper-slide:first-child {
+    background-image: url(../images/crew-dragon.jpg);
+}
+
+.next_missions .swiper_missions .swiper-slide:nth-child(2) {
+    background-image: url(../images/crew-dragon-3.jpg);
+}
+
+.next_missions .swiper_missions .swiper-slide:nth-child(3) {
+    background-image: url(../images/crew-dragon-2.jpg);
+}
+
+.next_missions .swiper_missions .swiper-slide h2 {
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    transition: transform 0.7s;
+}
+
+.next_missions .swiper_missions .swiper-slide p {
+    color: white;
+    transform: translateY(500px);
+    padding: 10px;
+    transition: transform 0.7s;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.next_missions .swiper_missions .swiper-slide:hover h2 {
+    transform: translateY(-350px);
+    transition: transform 0.7s;
+}
+
+.next_missions .swiper_missions .swiper-slide:hover p {
+    transform: translateY(10px);
+    transition: transform 0.7s;
 }
 
 .swiper_missions_container {
@@ -322,6 +363,27 @@ header div nav ul li:last-child a:hover {
 
 .swiper-button-prev img {
     transform: rotate(180deg);
+}
+
+.next_missions .countdown {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.next_missions .countdown p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.next_missions .countdown #countdown {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #303234;
+    padding: 10px 15px;
+    width: max-content;
+    margin: 0 auto;
 }
 
 /* Footer */
@@ -543,6 +605,24 @@ footer nav ul li a {
     .next_missions_pagination {
         width: 30%;
         height: 20px;
+    }
+
+    .next_missions .swiper_missions .swiper-slide h2 {
+        color: white;
+        font-size: 1rem;
+        position: absolute;
+        bottom: auto;
+        top: 20px;
+    }
+    
+    .next_missions .swiper_missions .swiper-slide p,
+    .next_missions .swiper_missions .swiper-slide:hover h2,
+    .next_missions .swiper_missions .swiper-slide:hover p {
+        transform: none;
+    }
+
+    .next_missions .countdown {
+        padding-top: 0;
     }
 
     /* FOOTER */
