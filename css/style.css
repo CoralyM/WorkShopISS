@@ -224,6 +224,15 @@ header div nav ul li:last-child a:hover {
 
 /* MAP */
 
+.map_title {
+    color: white;
+    background-color: #303234;
+    padding: 10px 20px;
+    width: max-content;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 .map {
     height: 100px;
     overflow: visible;
@@ -232,7 +241,7 @@ header div nav ul li:last-child a:hover {
     justify-content: center;
     background-color: #303234;
     margin-bottom: 150px;
-    margin-top: 200px;
+    margin-top: 180px;
 }
 
 #map {
@@ -249,7 +258,7 @@ header div nav ul li:last-child a:hover {
 }
 
 .map_infos {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     width: 70%;
     justify-content: center;
     display: flex;
@@ -257,9 +266,53 @@ header div nav ul li:last-child a:hover {
     font-weight: 700;
 }
 
+/* NAMES */
+
+.astronauts {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 20vw;
+    --move-initial: calc(0 + var(--offset));
+    --move-final: calc(-80% + var(--offset));
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 40s linear infinite;
+}
+
+.marquee span {
+    font-size: 4rem;
+    padding: 0 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px #303234;
+    color: transparent;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
 /* Next missions */
 
 .next_missions {
+    margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
     justify-content: space-between;

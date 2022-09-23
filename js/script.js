@@ -136,6 +136,12 @@ gsap.from(".specifications_img", {
   duration: 1,
 });
 
+gsap.from(".map_title", {
+  scrollTrigger: ".map_title",
+  x: -200,
+  duration: 1,
+});
+
 gsap.from("#map", {
   scrollTrigger: ".map",
   y: 200,
